@@ -10,7 +10,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.collections.Lists;
 import util.ConfigReader;
-import util.DriverFactory;
 
 import java.io.File;
 import java.io.IOException;
@@ -263,8 +262,8 @@ public class BaseActions{
     }
 
 
-    public String getBrowserTitle() {
-        return driver.getTitle();
+    public String getBrowserUrl() {
+        return driver.getCurrentUrl();
     }
 
     public String getScreenShot(String testCaseName, WebDriver driver) throws IOException {

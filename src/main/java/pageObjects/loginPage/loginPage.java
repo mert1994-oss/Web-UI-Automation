@@ -1,6 +1,7 @@
 package pageObjects.loginPage;
 
 import org.openqa.selenium.By;
+import org.testng.Assert;
 import pageObjects.base.BaseActions;
 
 public class loginPage extends BaseActions {
@@ -14,6 +15,7 @@ public class loginPage extends BaseActions {
     By tfEmailGoogle = By.id("identifierId");
     By tfPasswordGoogle = By.xpath("//div[text()='Enter your password']");
     By btnNextGoogle = By.xpath("//span[text()='Sonraki']");
+    By btnDontHaveAccountSignUp = By.xpath("//*[contains(text(),'Sign')]");
 
     public void fillEmailField(String email) { sendKey(tfEmail, email); }
 
@@ -51,5 +53,14 @@ public class loginPage extends BaseActions {
     public void fillPasswordFieldGoogle(String password){
         sendKey(tfPasswordGoogle, password);
         click(btnNextGoogle);
+    }
+
+    public void clickDontHaveAccountSignUpButton(){
+        click(btnDontHaveAccountSignUp);
+    }
+
+    public void checkBrowserTitleLoginPage(String expectedBrowserUrl){
+        String actualBrowserTitle = getBrowserUrl();
+        Assert.assertEquals(actualBrowserTitle,expectedBrowserUrl);
     }
 }

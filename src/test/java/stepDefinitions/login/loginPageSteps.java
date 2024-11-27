@@ -3,10 +3,8 @@ package stepDefinitions.login;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.WebDriver;
-import pageObjects.base.BaseActions;
 import pageObjects.loginPage.loginPage;
 import util.DriverFactory;
-
 import java.util.Set;
 
 public class loginPageSteps {
@@ -79,4 +77,13 @@ public class loginPageSteps {
         driver.switchTo().window(originalWindow);
     }
 
+    @When("click Don't have an account Sign Up button")
+    public void click_dont_have_an_account_sign_up_button(){
+        loginPage.clickDontHaveAccountSignUpButton();
+    }
+
+    @Then("verify browser URL is {string} on login page")
+    public void verify_browser_title_is_on_login_page(String expectedBrowserUrl){
+        loginPage.checkBrowserTitleLoginPage(expectedBrowserUrl);
+    }
 }

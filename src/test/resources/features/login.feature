@@ -22,7 +22,7 @@
      #   | email                | password   |
      #   | mert@talentrank.ai   | Mert1994*  |
 
-    Scenario Outline: Unsuccessful Login Scenario
+    Scenario Outline: Unsuccessful Login Invalid password Scenario
       When Navigate to login page
       And fill email field with "<email>"
       And fill password field with "<password>"
@@ -32,6 +32,26 @@
       Examples:
         | email             | password     |
         | fixed@fixed.com   | Mert1993*    |
+
+   Scenario Outline: Check Login page browser title
+     When Navigate to signup page
+     And click Have an Account Sign In button
+     Then verify browser URL is "<browserUrl>" on login page
+
+     Examples:
+       | browserUrl                                         |
+       | https://talentrank-corporate.vercel.app/tr/login   |
+
+    Scenario Outline: Unsuccessful Login Invalid email Scenario
+      When Navigate to login page
+      And fill email field with "<email>"
+      And fill password field with "<password>"
+      And click sign in button
+      Then verify invalid credentials warning appears
+
+      Examples:
+        | email              | password     |
+        | fixed1@fixed.com   | Mert1993*    |
 
     Scenario Outline: Check empty email warning
       When Navigate to login page
