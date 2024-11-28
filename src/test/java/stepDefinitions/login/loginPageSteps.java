@@ -14,13 +14,13 @@ public class loginPageSteps {
         this.loginPage = loginPage;
     }
 
-    @When("fill email field with {string}")
-    public void fill_email_field_with(String email){
+    @When("fill email field with {string} on login page")
+    public void fill_email_field_with_on_login_page(String email){
         loginPage.fillEmailField(email);
     }
 
-    @When("fill password field with {string}")
-    public void fill_password_field_with(String password){
+    @When("fill password field with {string} on login page")
+    public void fill_password_field_with_on_login_page(String password){
         loginPage.fillPasswordField(password);
     }
 
@@ -39,23 +39,23 @@ public class loginPageSteps {
         loginPage.checkInvalidCredentialsWarningNotExist();
     }
 
-    @When("verify empty email warning appears")
-    public void verify_empty_email_warning_appears(){
+    @When("verify empty email warning appears on login page")
+    public void verify_empty_email_warning_appears_on_login_page(){
         loginPage.checkEmptyEmailWarning();
     }
 
-    @When("verify empty password warning appears")
-    public void verify_empty_password_warning_appears(){
+    @When("verify empty password warning appears on login page")
+    public void verify_empty_password_warning_appears_on_login_page(){
         loginPage.checkEmptyPasswordWarning();
     }
 
-    @When("verify invalid email format warning appears")
-    public void verify_invalid_email_format_warning_appears(){
+    @When("verify invalid email format warning appears on login page")
+    public void verify_invalid_email_format_warning_appears_on_login_page(){
         loginPage.checkInvalidEmailFormatWarning();
     }
 
-    @Then("verify 6 digits password warning appears")
-    public void verify_six_digits_password_warning_appears(){
+    @Then("verify 6 digits password warning appears on login page")
+    public void verify_six_digits_password_warning_appears_on_login_page(){
         loginPage.checkSixDigitsWarning();
     }
 
