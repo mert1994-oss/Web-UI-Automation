@@ -1,5 +1,8 @@
 package pageObjects.loginPage;
 
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import pageObjects.base.BaseActions;
 import org.openqa.selenium.By;
@@ -82,10 +85,30 @@ public class signUpPage extends BaseActions {
 
     public void checkEmptyLocationWarning(){checkElementPresence(fieLocationWarning);}
 
-    public void clearTextOfCompanyName(){sendKey(tfCompanyName,"");}
+    public void clearTextOfCompanyName(){
+        wait.until(ExpectedConditions.elementToBeClickable(tfCompanyName));
+        WebElement element = driver.findElement(By.xpath("//input[@id=':r0:']"));
+        element.click();
+        while (!element.getAttribute("value").isEmpty()) {
+            element.sendKeys(Keys.BACK_SPACE);
+        }
+    }
 
     public void checkCompanyDomainExistWarning(){checkElementPresence(warCompanyDomainExists);}
 
     public void checkCompanyDomainExistWarningNotAppear(){checkElementInvisible(warCompanyDomainExists);}
+
+    public String getTheCompanyNameFromEmailDomain(String email){
+        String[] splittedText = email.split("@");
+        return splittedText[1].split("\\.")[0];
+    }
+
+    public void checkCompanyNameEqualstoEmailDomain(String email){
+        String expectedText = getTheCompanyNameFromEmailDomain(email);
+        wait.until(ExpectedConditions.elementToBeClickable(tfCompanyName));
+        WebElement element = driver.findElement(By.xpath("//input[@id=':r0:']"));
+        String actualText = element.getAttribute("value");
+        Assert.assertEquals(actualText, expectedText);
+    }
 
 }

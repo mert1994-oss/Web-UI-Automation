@@ -102,4 +102,10 @@ public class signUpPageSteps {
 
     @Then("verify company domain exist warning not appear")
     public void verify_company_domain_exist_warning_not_appear(){signUpPage.checkCompanyDomainExistWarningNotAppear();}
+
+    @Then("verify company name is extracted from {string} email")
+    public void verify_company_name_is_extracted_from_email(String email){
+        signUpPage.getTheCompanyNameFromEmailDomain(email);
+        signUpPage.checkCompanyNameEqualstoEmailDomain(email);
+    }
 }

@@ -97,6 +97,19 @@
      And verify empty workspace name warning appears on signup page
      And verify empty company size warning appears on signup page
      And verify empty location warning appears on signup page
+
      Examples:
        |  email                  | password         |   name           |
-       |  fixed@fixed4.com       | password_04      | name_07          |
+       |  fixed@fm00.com         | password_04      | name_07          |
+
+   Scenario Outline: Check company domain reflects as company name
+     When Navigate to signup page
+     And fill name field with "<name>" on signup page
+     And fill email field with "<email>" on signup page
+     And fill password field with "<password>" on signup page
+     And click sign up button
+     Then verify company name is extracted from "<email>" email
+
+     Examples:
+       |  email                  | password         |   name           |
+       |  fixed@fn00.com         | password_04      | name_07          |
