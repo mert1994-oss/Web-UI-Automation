@@ -100,7 +100,7 @@
 
      Examples:
        |  email                  | password         |   name           |
-       |  fixed@fm00.com         | password_04      | name_07          |
+       |  fixed@fm02.com         | password_04      | name_07          |
 
    Scenario Outline: Check company domain reflects as company name
      When Navigate to signup page
@@ -112,4 +112,4 @@
 
      Examples:
        |  email                  | password         |   name           |
-       |  fixed@fn00.com         | password_04      | name_07          |
+       |  fixed@fn03.com         | password_04      | name_07          |

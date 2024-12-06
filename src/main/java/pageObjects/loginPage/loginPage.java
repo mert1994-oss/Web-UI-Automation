@@ -5,12 +5,12 @@ import org.testng.Assert;
 import pageObjects.base.BaseActions;
 
 public class loginPage extends BaseActions {
-    By tfEmail = By.id(":Rcmfnkva:");
-    By tfPassword = By.id(":Rkmfnkva:");
+    By tfEmail = By.id(":R1ipuusva:");
+    By tfPassword = By.id(":R2ipuusva:");
     By btnSignIn = By.xpath("//button[contains(@class,'LoginForm_buttonPrimary')]");
     By warInvalidCredentials = By.xpath("//div[text()='Invalid credentials. Please check your email or password.']");
-    By fieEmailWarning = By.id(":Rcmfnkva:-helper-text");
-    By fiePasswordWarning = By.id(":Rkmfnkva:-helper-text");
+    By fieEmailWarning = By.id(":R1ipuusva:-helper-text");
+    By fiePasswordWarning = By.id(":R2ipuusva:-helper-text");
     By btnSignInGoogle = By.xpath("//button[text()='Login with Google']");
     By tfEmailGoogle = By.id("identifierId");
     By tfPasswordGoogle = By.xpath("//div[text()='Enter your password']");

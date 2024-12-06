@@ -8,9 +8,9 @@ import pageObjects.base.BaseActions;
 import org.openqa.selenium.By;
 
 public class signUpPage extends BaseActions {
-    By tfName = By.id(":Rcmfnkva:");
-    By tfEmail = By.id(":Rkmfnkva:");
-    By tfPassword = By.id(":Rsmfnkva:");
+    By tfName = By.id(":R1ipuusva:");
+    By tfEmail = By.id(":R2ipuusva:");
+    By tfPassword = By.id(":R3ipuusva:");
     By btnSignup = By.xpath("//button[text()='Sign Up']");
     By btnSignupWithGoogle = By.xpath("//button[text()='Sign Up with Google']");
     By btnHaveAccountSignIn = By.xpath("//a[@class='SignupForm_linkPrimary__nX_ei']");
@@ -19,9 +19,9 @@ public class signUpPage extends BaseActions {
     By drpCompanySize = By.xpath("//div[@aria-controls=':r2:']");
     By drpLocation = By.xpath("//div[@aria-controls=':r3:']");
     By btnAllGood = By.xpath("//button[contains(@class, 'submitButton')]");
-    By fieNameWarning = By.id(":Rcmfnkva:-helper-text");
-    By fieEmailWarning = By.id(":Rkmfnkva:-helper-text");
-    By fiePasswordWarning = By.id(":Rsmfnkva:-helper-text");
+    By fieNameWarning = By.id(":R1ipuusva:-helper-text");
+    By fieEmailWarning = By.id(":R2ipuusva:-helper-text");
+    By fiePasswordWarning = By.id(":R3ipuusva:-helper-text");
     By fieCompanyNameWarning = By.id(":r0:-helper-text");
     By fieWorkspaceNameWarning = By.id(":r1:-helper-text");
     By fieCompanySizeWarning = By.xpath("//p[text()='Company size is required.']");

@@ -2,13 +2,13 @@
 
   Feature: Login Scenarios Feature
 
+
     Scenario Outline: Successful Login with email Scenario
       When Navigate to login page
       And fill email field with "<email>" on login page
       And fill password field with "<password>" on login page
       And click sign in button
       Then verify invalid credentials warning not appears
-
       Examples:
         | email             | password   |
         | fixed@fixed.com   | Mert1994*  |
