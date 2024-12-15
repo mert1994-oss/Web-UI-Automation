@@ -1,4 +1,4 @@
-package pageObjects.loginPage;
+package pageObjects.pages;
 
 import org.openqa.selenium.By;
 import pageObjects.base.BaseActions;

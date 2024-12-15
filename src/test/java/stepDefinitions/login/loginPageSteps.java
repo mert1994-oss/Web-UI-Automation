@@ -3,7 +3,7 @@ package stepDefinitions.login;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.WebDriver;
-import pageObjects.loginPage.loginPage;
+import pageObjects.pages.loginPage;
 import util.DriverFactory;
 import java.util.Set;
 

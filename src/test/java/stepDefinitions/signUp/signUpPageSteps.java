@@ -3,7 +3,7 @@ package stepDefinitions.signUp;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.testng.Assert;
-import pageObjects.loginPage.signUpPage;
+import pageObjects.pages.signUpPage;
 
 public class signUpPageSteps {
     private signUpPage  signUpPage;

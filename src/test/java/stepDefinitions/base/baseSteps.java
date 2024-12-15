@@ -14,4 +14,9 @@ public class baseSteps extends BaseActions {
     public void navigate_to_signup_page(){
         navigateToPath("signUpUrl");
     }
+
+    @When("Navigate to home page")
+    public void navigate_to_gome_page(){
+        navigateToPath("homeUrl");
+    }
 }

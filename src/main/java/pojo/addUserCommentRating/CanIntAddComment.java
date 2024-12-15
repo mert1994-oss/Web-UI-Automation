@@ -1,4 +1,4 @@
-package pojo;
+package pojo.addUserCommentRating;
 
 public class CanIntAddComment {
 
